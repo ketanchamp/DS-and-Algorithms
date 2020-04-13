@@ -1,2 +1,10 @@
 # DS-and-Algorithms
-You might read new concepts, but implementing is more fun!
+Preparing for Interviews?
+-----------------------------------------
+Participating in Competitive Programming?
+-----------------------------------------
+Want to make your CS fundamentals strong?
+-----------------------------------------
+
+ANSWER IS: CODE THAT FASTEST ALGORITHM USING BEST DATASTRUCTURES!
+-----------------------------------------------------------------
