@@ -11,7 +11,7 @@
 
 //https://leetcode.com/problems/rotate-list/
 
-// Time Complexity- O(n) using counting the nodes in the list
+// Time Complexity- O(n) using counting the nodes in the list, Solution number 1
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
@@ -37,7 +37,7 @@ public:
     }
 };
 
-// Time Complexity- O(K) without counting the nodes in the lists
+// Time Complexity- O(K) without counting the nodes in the lists, Solution number 2
 //Note: This might give TLE for high values of K
 class Solution {
 public:
