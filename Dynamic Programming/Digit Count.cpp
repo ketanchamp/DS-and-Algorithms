@@ -23,7 +23,6 @@
      for(int i=0;i<=9;i++) if(ma[i]) ans+=run(1,i,n);
      cout<<ans<<endl;
      return;
-
  }
  int main()
  {
