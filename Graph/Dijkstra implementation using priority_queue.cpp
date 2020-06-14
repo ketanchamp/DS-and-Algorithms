@@ -7,17 +7,17 @@ void dijkstra(int source, vector< pair < int, int> > adj[], int vertices) {
 
 	distance[1] = 0;
 	pq.push({0, 1});		// Source is 1 with distance 0 initially
-	git
+
 	while( !pq.empty() ) {  // loop till pq becomes empty
 		int cur = pq.top().second;
 		pq.pop();
 		for(auto i : adj[cur]) {
-			int v = i.first;
+			int to = i.first;
 			int weight = i.second;
 
-			if(distance[v] > distance[cur] + weight) {
-				distance[v] = distance[cur] + weight;
-				pq.push({distance[v], v});
+			if(distance[to] > distance[cur] + weight) {
+				distance[to] = distance[cur] + weight;
+				pq.push({distance[to], to});
 			}
 		}
 	}
