@@ -1,10 +1,10 @@
 // Time Complexity- O(E + V) for this adjacency list graph where E is number of edges and V is number of vertices
 #include<bits/stdc++.h>
 using namespace std;
-stack<int> s;						// Stack storing the finish times
+stack<int> s;					// Stack storing the finish times
 vector<int> adj[500]; 				// Adjacency list for a graph
 vector<int> rev[500];				// Graph after reversing
-vector<bool> vis(500, false);		// Visited array
+vector<bool> vis(500, false);			// Visited array
 
 void dfs(int node){  				// DFS Pass 1 for storing values in Stack in decreasing finish time of a node
 	vis[node] = true;
@@ -19,7 +19,7 @@ void dfs1(int node){				// DFS Pass 2 for determining the strongly connected com
 	for(int i : rev[node]){
 		if(!vis[i]) dfs1(i);
 	}
-	cout<<node<<" ";				// printing vertices in a strongly connected components
+	cout<<node<<" ";			// printing vertices in a strongly connected components
 }
 int main()
 {
@@ -39,7 +39,7 @@ int main()
 		for(int j : adj[i]) rev[j].push_back(i);
 	}
 
-	while(!s.empty()){							// DFS on nodes from stack
+	while(!s.empty()){					// DFS on nodes from stack
 		int node = s.top();
 		s.pop();
 		if(!vis[node]) {dfs1(node);cout<<endl;}
