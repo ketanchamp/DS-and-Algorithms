@@ -13,16 +13,16 @@ public:
         int b[] = {1, -1, 0, 0, 1, -1, 1, -1};
         dist[0][0] = 1;
         pq.push({1, {0, 0}});
-        while(!pq.empty()){
+        while(!pq.empty()) {
             int x = pq.top().second.first;
             int y = pq.top().second.second;
             int w = pq.top().first;
             pq.pop();
-            for(int i = 0; i < 8; i++){         // checking in all 8 directions
+            for(int i = 0; i < 8; i++) {         // checking in all 8 directions
                 int xx = x + a[i];
                 int yy = y + b[i];
-                if(xx >= n || xx < 0 || yy >= n || yy < 0) continue;
-                if(dist[xx][yy] > w + 1 && mat[xx][yy] == 0){
+                if(xx >= n || xx < 0 || yy >= n || yy < 0 || mat[xx][yy]) continue;
+                if(dist[xx][yy] > w + 1) {
                     dist[xx][yy] = w + 1;
                     pq.push({dist[xx][yy], {xx, yy}});
                 }
