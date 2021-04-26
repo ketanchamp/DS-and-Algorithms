@@ -8,8 +8,8 @@ bool dfs(int node, int parent, vector<bool>& visited, vector< int > adj[]){
 	visited[node] = true;
 	for(int i : adj[node]){
 		if(i != parent ){
-			if(!visited[i] && dfs(i, node, visited, adj)) return true;
-			else return true;
+			if(visited[i]) return true;
+			else if(dfs(i, node, visited, adj)) return true;	
 		}
 	}
 	return false;
