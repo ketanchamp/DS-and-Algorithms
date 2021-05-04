@@ -10,8 +10,6 @@ int longestIncreasingSubsequence(int size, vector<int> arr) {
 		if(index == length) tail[length++] = arr[i];
 		else tail[index] = arr[i];
 	}
-	for(int i = 0; i < length; i++) cout << tail[i] << " ";
-	cout << endl;
     return length;
 }
 int main()
