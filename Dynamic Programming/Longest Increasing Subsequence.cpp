@@ -1,4 +1,4 @@
-// Time Complexity- O( N log (N) )  N for extra traversing + log (N) for searching
+// Time Complexity- O( N log (N) )  N for extra traversing * log (N) for searching
 #include<bits/stdc++.h>
 using namespace std;
 int longestIncreasingSubsequence(int size, vector<int> arr) {
